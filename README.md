@@ -1,5 +1,5 @@
 # Tugas Individu
-Nama : Bayu Sukma
+Nama : Bayu Sukma <br>
 NIM  : 1124160034
 
 # Document Analysis
@@ -7,7 +7,7 @@ NIM  : 1124160034
 ## 1. Propblem Statement
 Membuat simulasi sistem pembayaran E-Wallet.
 
-Sistem ini memiliki ketentuan bahwa saldo tidak boleh minus, adanya limit transaksi perhari sebesar Rp. 2.000.000 dan jika salah pin sebanyak 3x maka akun akan diblokir.
+Sistem ini memiliki ketentuan bahwa saldo tidak boleh minus, adanya limit transaksi perhari sebesar <br>Rp. 2.000.000 dan jika salah pin sebanyak 3x maka akun akan diblokir.
 
 ## 2. Actor
 Aktor yang menggunakan sistem ini adalah <strong> Nasabah (pemilik akun E-Wallet) <strong>
