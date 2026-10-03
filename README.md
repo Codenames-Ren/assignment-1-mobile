@@ -38,4 +38,10 @@ Fungsi utama dalam sistem ini :
 | RB-02 | Transaki perhari dibatasi limit harian sebesar Rp. 2.000.000 (dua juta)        |
 | RB-03 | Salah pin sebanyak 3x, maka akun E-Wallet akan di blokir                       |
 
-## 6. 
+## 6. Decomposition
+    payment
+        ├── lowBalance         → memastikan saldo tidak minus                             (RB-01)
+        ├── limitExceeded      → menolak transaksi jika melebihi limit harian             (RB-02)
+        ├── wrongPin           → cek kesalahan pin pakai boolean dengan maksimal 3x salah (RB-03)
+        ├── blocked            → blokir akun ketika salah input pin 3x                    (BR-03)
+        └── tampilkan hasil transaksi
