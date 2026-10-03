@@ -43,5 +43,6 @@ Fungsi utama dalam sistem ini :
         ├── lowBalance         → memastikan saldo tidak minus                             (RB-01)
         ├── limitExceeded      → menolak transaksi jika melebihi limit harian             (RB-02)
         ├── wrongPin           → cek kesalahan pin pakai boolean dengan maksimal 3x salah (RB-03)
-        ├── blocked            → blokir akun ketika salah input pin 3x                    (BR-03)
+        ├── blocked            → blokir akun ketika salah input pin 3x                    (RB-03)
         └── tampilkan hasil transaksi
+
