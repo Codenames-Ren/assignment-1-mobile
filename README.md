@@ -46,3 +46,8 @@ Fungsi utama dalam sistem ini :
         ├── blocked            → blokir akun ketika salah input pin 3x                    (RB-03)
         └── tampilkan hasil transaksi
 
+## 7. Pattern Recognition
+Dalam sistem e-wallet ini kemungkinan ada beberapa pola: 
+* Pengecekan kondisi : artinya setiap kali transaksi dilakukan sistem akan mengecek saldo nasabah cukup atau tidak, batas limit harian, dan pin yang dipakai benar atau salah.
+* Counter kesalahan : Sistem akan selalu mengecek batas kesalahan pin yang diinput apakah sudah mencapai batas 3x atau belum.
+* Nominal yang berkurang : Setiap transaksi berhasil, sistem akan selalu mengurangi saldo nasabah dan juga limit hariannya.
