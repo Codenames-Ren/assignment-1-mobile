@@ -10,7 +10,7 @@ Membuat simulasi sistem pembayaran E-Wallet.
 Sistem ini memiliki ketentuan bahwa saldo tidak boleh minus, adanya limit transaksi perhari sebesar <br>Rp. 2.000.000 dan jika salah pin sebanyak 3x maka akun akan diblokir.
 
 ## 2. Actor
-Aktor yang menggunakan sistem ini adalah <strong> Nasabah (pemilik akun E-Wallet) <strong>
+Aktor yang menggunakan sistem ini adalah <strong> Nasabah (pemilik akun E-Wallet) </strong>
 
 ## 3. Input & Output
 Input : 
