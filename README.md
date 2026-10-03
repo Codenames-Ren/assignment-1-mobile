@@ -51,3 +51,17 @@ Dalam sistem e-wallet ini kemungkinan ada beberapa pola:
 * <strong>Pengecekan kondisi</strong> : artinya setiap kali transaksi dilakukan sistem akan mengecek saldo nasabah cukup atau tidak, batas limit harian, dan pin yang dipakai benar atau salah.
 * <strong>Counter kesalahan</strong> : Sistem akan selalu mengecek batas kesalahan pin yang diinput apakah sudah mencapai batas 3x atau belum.
 * <strong>Nominal yang berkurang</strong> : Setiap transaksi berhasil, sistem akan selalu mengurangi saldo nasabah dan juga limit hariannya.
+
+## 8. Abstraction
+    payment
+        ├── pin
+        ├── balance
+        └── balanceLimit
+
+Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
+* Pin sebagai media pengaman saat transaksi
+* Saldo
+* Limit saldo, bisa berupa harian maupun bulanan. Tapi di sistem ini di set limit harian.
+
+3 aspek ini pasti akan selalu ada di setiap sistem pembayaran.
+
