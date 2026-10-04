@@ -54,3 +54,25 @@ void payment(double total, int inputPin) {
   print("Saldo : Rp.$balance");
   print("Limit Harian : Rp.$limit");
 }
+
+void main() {
+  //transaksi normal (sukses)
+  payment(500000, 945313);
+
+  //salah pin 1x
+  payment(2000000, 111111);
+
+  // limit harian
+  payment(2500000, 945313);
+
+  //Saldo gak cukup
+  payment(1500000, 945313);
+
+  //salah pin 3x (blokir akun)
+  payment(100000, 123123);
+  payment(100000, 123123);
+  payment(100000, 123123);
+
+  //Test transaksi abis kena blokir
+  payment(10000, 945313);
+}
