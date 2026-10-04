@@ -101,3 +101,40 @@ Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
 
 Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alur (flowchart) ini.
 
+## Pseudocode
+    ```
+    PROCEDURE payment(total, inputPin)
+        IF blocked THEN
+            DISPLAY "Akun Diblokir"
+            RETURN "Transaksi Gagal!"
+        END IF
+
+        IF inputPin != validPin THEN
+            wrongPin = wrongPin + 1
+            DISPLAY "Pin Salah!"
+            IF wrongPin >= 3 THEN
+                blocked = TRUE
+                DISPLAY = "Akun Anda Diblokir!"
+            END IF
+            RETURN "Transaksi Dibatalkan."
+        END IF
+
+        wrongPin = 0
+
+        IF total > limitExceeded THEN
+            DISPLAY "Melebihi Batas Transaksi Harian"
+            RETURN "Transaksi Dibatalkan."
+        END IF
+
+        IF total > saldo THEN
+            DISPLAY "Saldo Tidak Mencukupi!"
+            RETURN "Transaksi Dibatalkan."
+        END IF
+
+        balance = balance - total
+        limitExceeded = limitExceeded - total
+
+        DISPLAY "Transaksi Berhasil!"
+        RETURN "Sukses"
+    END PROCEDURE
+    ```
