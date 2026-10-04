@@ -102,7 +102,6 @@ Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
 Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alur (flowchart) ini.
 
 ## Pseudocode
-    ```
     PROCEDURE payment(total, inputPin)
         IF blocked THEN
             DISPLAY "Akun Diblokir"
@@ -137,4 +136,3 @@ Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alu
         DISPLAY "Transaksi Berhasil!"
         RETURN "Sukses"
     END PROCEDURE
-    ```
