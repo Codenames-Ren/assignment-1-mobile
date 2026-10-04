@@ -75,13 +75,13 @@ Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
         [Pin Valid?]─────────────────────────────────────────────────────► [Tampilkan Pesan : Pin Salah]
         Ya   |        Tidak                                                                 |
              |                                                                              ▼      Tidak
-             |                                                                           [Salah 3x?]───────► [Tampilkan Pesan : Pin Salah]
-             |                                                                            Ya  |                               |
-             |                                                                                ▼                               |
-             ▼                                                                         [Akun Diblokir]                        |
-    [Batas Limit Harian?]─────► [Tampilkan Pesan : Limit Terpenuhi]                           |                               |
-             |            Ya                                                                  ▼                               |
-       Tidak |                                                                            [Selesai] ◄─────────────────────────┘
+             |                                                                        [Salah 3x?]───────► [Tampilkan Pesan : Pin Salah]
+             |                                                                          Ya  |                               |
+             |                                                                              ▼                               |
+             ▼                                                                       [Akun Diblokir]                        |
+    [Batas Limit Harian?]─────► [Tampilkan Pesan : Limit Terpenuhi]                         |                               |
+             |            Ya                                                                ▼                               |
+       Tidak |                                                                          [Selesai] ◄─────────────────────────┘
              ▼
       [Saldo Cukup?]─────► [Tampilkan Pesan : Saldo Tidak Cukup]
              |      Tidak
