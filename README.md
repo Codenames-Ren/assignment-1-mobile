@@ -65,3 +65,39 @@ Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
 
 3 aspek ini pasti akan selalu ada di setiap sistem pembayaran.
 
+## 9. Flowchart
+          [Start]
+             |
+             ▼
+    [Input Nominal & Pin]
+             |
+             ▼       
+        [Pin Valid?]─────────────────────────────────────────────────────► [Tampilkan Pesan : Pin Salah]
+        Ya   |        Tidak                                                                 |
+             |                                                                              ▼      Tidak
+             |                                                                           [Salah 3x?]───────► [Tampilkan Pesan : Pin Salah]
+             |                                                                            Ya  |                               |
+             |                                                                                ▼                               |
+             ▼                                                                         [Akun Diblokir]                        |
+    [Batas Limit Harian?]─────► [Tampilkan Pesan : Limit Terpenuhi]                           |                               |
+             |            Ya                                                                  ▼                               |
+       Tidak |                                                                            [Selesai] ◄─────────────────────────┘
+             ▼
+      [Saldo Cukup?]─────► [Tampilkan Pesan : Saldo Tidak Cukup]
+             |      Tidak
+          Ya |
+             ▼
+        [Potong Saldo dan 
+    Turunkan Sisa Limit Harian]
+             |
+             |
+             ▼
+      [Tampilkan Pesan :
+     Transaksi Berhasil]
+             |
+             |
+             ▼
+         [Selesai]
+
+Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alur (flowchart) ini.
+
