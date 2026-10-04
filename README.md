@@ -41,7 +41,7 @@ Fungsi utama dalam sistem ini :
 ## 6. Decomposition
     payment
         ├── lowBalance         → memastikan saldo tidak minus                             (RB-01)
-        ├── limitExceeded      → menolak transaksi jika melebihi limit harian             (RB-02)
+        ├── limit              → menolak transaksi jika melebihi limit harian             (RB-02)
         ├── wrongPin           → cek kesalahan pin pakai boolean dengan maksimal 3x salah (RB-03)
         ├── blocked            → blokir akun ketika salah input pin 3x                    (RB-03)
         └── tampilkan hasil transaksi
@@ -56,7 +56,7 @@ Dalam sistem e-wallet ini kemungkinan ada beberapa pola:
     payment
         ├── pin
         ├── balance
-        └── balanceLimit
+        └── limit
 
 Dalam sistem pembayaran pada umumnya, ada 3 hal yang biasanya pasti ada. yaitu :
 * Pin sebagai media pengaman saat transaksi
@@ -105,7 +105,7 @@ Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alu
     PROCEDURE payment(total, inputPin)
         IF blocked THEN
             DISPLAY "Akun Diblokir"
-            RETURN "Transaksi Gagal!"
+            RETURN "Transaksi Dibatalkan."
         END IF
 
         IF inputPin != validPin THEN
@@ -120,7 +120,7 @@ Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alu
 
         wrongPin = 0
 
-        IF total > limitExceeded THEN
+        IF total > limit THEN
             DISPLAY "Melebihi Batas Transaksi Harian"
             RETURN "Transaksi Dibatalkan."
         END IF
@@ -131,7 +131,7 @@ Untuk menggambarkan bagaimana sistem ini bekerja, dapat dilihat pada diagram alu
         END IF
 
         balance = balance - total
-        limitExceeded = limitExceeded - total
+        limit = limit - total
 
         DISPLAY "Transaksi Berhasil!"
         RETURN "Sukses"
